@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #infoBox{
+            padding: 5px;
+            border: 2px dashed #ccc;
+            margin-bottom: 10px;
+            width: 136px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+        #wrapper{
+            padding: 20px 0 ;
+            background: black;
+            width: 150px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <p id="infoBox"></p>
+    <div id="wrapper">
+        <input type="button" value="click me" id="btn">
+    </div>
+</body>
+</html>
+<script >
+    var infoBox=document.getElementById("infoBox"),wrapper=document.getElementById("wrapper"),btn=document.getElementById("btn");
+
+    
+    wrapper.onclick=function(){
+        infoBox.innerHTML="你点击的：div";
+    }
+    btn.onclick=function(){
+        infoBox.innerHTML="你点击的是:input";
+    }
+
+</script>

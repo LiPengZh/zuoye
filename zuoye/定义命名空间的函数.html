@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            var glo={};
+            glo.namespace=function(str){
+                var arr=str.split("."),o=glo;
+                for(i=(arr[0]="glo")?1:0;i<arr.length;i++){
+                    o[arr[i]]=o[arr[i]]||{};
+                    o=o[arr[i]];
+                }
+            }
+        </script>
+        <script>
+            (function(){
+                var a=123,b="hello world"
+                glo.namespace("A.CAT");
+                glo.namespace("A.DOG");
+                glo.A.CAT.name="ssa";
+                glo.A.DOG.name="wangcai";
+                glo.A.CAT.move=function(){
+
+                }
+                glo.A.DOG.move=function(){
+
+                }
+                glo.A.str2=a;
+                glo.a.str=b;
+            })();
+        </script>
+</body>
+</html>

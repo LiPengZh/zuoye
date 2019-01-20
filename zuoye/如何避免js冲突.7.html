@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var glo={};    
+    </script>
+
+    <script>
+    (function(){
+        var a=123,b="hello world";
+        glo.A={};
+        glo.A.str2=a;
+        glo.A.str=b;
+    })();
+    </script>
+
+    <script>
+    (function(){
+        var a, c="abc";
+        glo.B={};
+        glo.B.str=c; 
+    })();
+    </script>
+
+    <script>
+    (function(){
+        var a=glo.str.str2,b=glo.A.str;
+        var d="ssss";
+        d=b+","+a+d;
+    
+    })();
+    </script>
+
+    <script>
+    (function(){
+        var test=glo.B.str;
+        alert(test);
+    })();
+    </script>
+</body>
+</html>

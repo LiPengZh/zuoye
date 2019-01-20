@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var GLOBAL={};
+        
+        </script>
+        
+        <script>
+            (function(){
+                var str2= a=123,str=b="hello world";
+                GLOBAL.str2=a;
+                GLOBAL.str=b;
+            })();
+        </script>
+
+        <script>
+        (function(){
+            var a, c="abc";
+        })();
+        </script>
+
+        <script>
+        (function(){
+          var a=GLOBAL.str2,b=GLOBAL.str;
+            var d="addasada"
+            d=b+","+a+d;
+            console.log(d);
+        })();
+        
+        </script>
+</body>
+</html>

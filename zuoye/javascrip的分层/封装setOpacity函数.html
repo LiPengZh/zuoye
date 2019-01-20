@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #test1{
+            background: blue;height: 100px;
+        }
+        #test2{
+            background: green;height: 100px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="test1"></div>
+    <div id="test2"></div>
+    <script>
+        function setOpacity(node,level){
+            node =typeof node=="string"?document.getElementById(node):node;
+            if(document.all){
+                node.style.filter='alpaha(opacity='+level+')';
+            }else{
+                node.style.opacity=level/100;
+            }
+        }
+    setOpacity("test1",20);
+    setOpacity("test2",80)
+    </script>
+    
+</body>
+</html>

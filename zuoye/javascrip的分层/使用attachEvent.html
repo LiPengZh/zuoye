@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"></button>
+</body>
+</html>
+<script>
+    var btn=document.getElementById("btn");
+    if(document.all){
+        btn.attachEvent("onclick",function(){
+            alert(1);
+        });
+    }else{
+        btn.addEventListener("click",function(){
+            alert(1);
+        },false);
+    }
+    if(document.all){
+        btn.attachEvent("onclick",function(){
+            alert(2);
+        });
+    }else{
+        btn.addEventListener("click",function(){
+            alert(2);
+        },false);
+    }
+</script>

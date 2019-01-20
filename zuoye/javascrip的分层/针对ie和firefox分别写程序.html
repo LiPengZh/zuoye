@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="item1"></li>
+        <li id="item2"></li>
+        <li id="item3"></li>
+    </ul>
+</body>
+</html>
+<script>
+var item1=document.getElementById("item1");
+var nextNode =item1.nextSibling;
+if(!document.all){
+    while(true){
+        if(nextNode.nodeType==1){
+            break;
+        }else{
+            if(nextNode.nextSibling){
+                nextNode=nextNode.nextSibling;
+            }else{
+                break;
+            }
+        }
+    }
+}
+alert(nextNode.id);
+
+var item2=document.getElementById("item2");
+var nextNode2=item2.nextSibling;
+if(!document.all){
+    while(true){
+        if(nextNode2.nodeType==1){
+            break;
+        }else{
+            if(nextNode2.nextSibling){
+                nextNode2=nextNode2.nextSibling;
+            }else{
+                break;
+            }
+
+        }
+    }
+}
+alert(nextNode2.id)
+</script>
