@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            padding: 0;
+            margin: 0;
+        }
+        .tab{
+            width: 400px;
+        }
+        .tab-menuWrapper{
+            padding-left: 20px;
+        }
+        .tab-menuWrapper li{
+          
+            display: inline;
+            padding: 5px;
+            border: 1px solid #333;
+            border-bottom: none;
+            margin-right: 5px;
+            float: left;
+        }
+        .tab-contenWrapper{
+            border: 1px solid #333;
+            clear: left;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <ul class="tab-menuWrapper">
+            <li id="tab-menu1">menu1</li> 
+            <li id="tab-menu2">menu2</li> 
+            <li id="tab-menu3">menu3</li> 
+        </ul>
+        <div class="tab-contenWrapper">
+            <div id="tab-content1">content1</div>
+            <div id="tab-content2" style="display:none">ssss</div>
+            <div id="tab-content3" style="display:none">33333</div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var tabmenu1=document.getElementById("tab-menu1"),
+    tabmenu2=document.getElementById("tab-menu2"),
+    tabmenu3=document.getElementById("tab-menu3"),
+    tabContent1=document.getElementById("tab-content1"),
+    tabContent2=document.getElementById("tab-content2"),
+    tabContent3=document.getElementById("tab-content3");
+    tabmenu1.onclick=function(){
+        tabContent1.style.display="block";
+        tabContent2.style.display="none";
+        tabContent3.style.display="none";
+    }
+    tabmenu2.onclick=function(){
+        tabContent1.style.display="none";
+        tabContent2.style.display="block";
+        tabContent3.style.display="none";
+    }
+    tabmenu3.onclick=function(){
+        tabContent1.style.display="none";
+        tabContent2.style.display="none";
+        tabContent3.style.display="block";
+    }
+    // tabmenu3.onclick=function(){
+    //     tabContent1.style.display="none";
+    //     tabContent2.style.display="none";
+    //     tabContent3.style.display="block";
+    // }
+
+
+</script>

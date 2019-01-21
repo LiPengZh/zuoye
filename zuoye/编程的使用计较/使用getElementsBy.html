@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tab">
+        <ul class="tab-menuWrapper" id="tab-menuWrapper">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ul>
+        <div class="tab-contenWrapper">
+            <div class="J_tab-content"><div>conten1</div><ul>abc</ul></div>
+            <div class="J_tab-content" style="display:none"><p>content2</p><div>aaa</div></div>
+            <div class="J_tab-content" style="display:none">content3</div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var glo={};
+    glo.namespace=function(str){
+        var arr=str.split("."),o=glo;
+        for(i=(arr[0]="glo")?1:0;i<arr.length;i++){
+            o[arr[i]]=o[arr[i]] || {};
+            o=o[arr[i]];
+        }
+    }
+    glo.namespace("Dom");
+    glo.Dom.getElementntsByClassName=function(str,root,tag){
+        if(root){
+            root=typeof root=="string"?document.getElementById(root):root;
+
+        }else{
+            root=document.body;
+        }
+        tag=tag || "*";
+        var els=root.getElementsByTagName(tag),arr=[];
+        for(var i=0,n=els.length;i<n;i++){
+            for(var j=0,k=els[i].className.split(""),l=k.length;j<l;j++){
+                if(k[j]==str){
+                    arr.push(els[i]);
+                    break;
+                }
+            }
+        }
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<>
+    <div class="tab">
+        <ul class="tab-menuWrapper" id="tab-menuWrapper">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ul>
+    </div>
+    <div class="tab-contentWrapper" id="tab-contentWrapper">
+        <div><div>content1</div><ul><li>abc</li></ul></div>
+    <div style="display:none"><p>content2</p><div>abc</div></div>
+    <div style="display:none">content3</div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var tabMenus=document.getElementById("tab-menuWrapper").getElementsByTagName("li"),
+    tabContents=document.getElementById("tab-contentWrapper").getElementsByTagName("div");
+    alert(tabContents.length);
+
+</script>
