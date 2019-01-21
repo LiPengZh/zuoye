@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var re1=/ABC\-001/;
+			var re2=new RegExp('ABC\\-001');
+//			console.log(re1);
+//			console.log(re2);
+			
+			var re=/^(\d{3})-(\d{3,8})$/;
+			console.log(re.exec('010-12345'));
+		</script>
+	</body>
+</html>
