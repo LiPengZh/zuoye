@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btn" value="click me" onclick="alert(123)"/>
+	</body>
+</html>
+<script type="text/javascript">
+	function handler(){
+		alert(456);
+	}
+	if(document.all){
+		btn.attachEvent("onclick",handler);
+	}else{
+		btn.addEventListener("click",handler,false);
+	}
+</script>
+<!-- 123  456-->

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btn" value="click me" onclick="handler()"/>
+	</body>
+</html>
+<script type="text/javascript">
+	function handler(){
+		alert(arguments.length);
+	}
+</script>
+<!-- 在IE和firefox下,这段代码弹出的都是0.也就是说,标签内练事件并没有被替换成代码清单-->
